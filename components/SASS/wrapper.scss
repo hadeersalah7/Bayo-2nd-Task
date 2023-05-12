@@ -1,0 +1,532 @@
+@import "./basic.scss";
+
+.container {
+  width: 100%;
+  height: auto;
+}
+
+.container-wrapper {
+  background-color: #fff;
+  border-radius: 15px;
+  margin-top: 40px;
+  padding: 20px;
+  .first-wrapper {
+    width: 100%;
+    padding-top: 30px;
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+  }
+
+  .icons-wrapper {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    align-items: space-between;
+    flex-wrap: wrap;
+    // background-color: red;
+
+    #sort {
+      margin-left: 30px;
+
+      .sort-by {
+        display: flex;
+        justify-content: flex-start;
+        padding: 5px 15px;
+        width: 250px;
+        height: 40px;
+        // padding: 3px;
+        border-radius: 10px;
+        border: 2px solid $button-color;
+        background-color: #fff;
+        color: $button-color;
+        font-size: 1em;
+        position: relative;
+        span {
+          font-size: 20px;
+          position: absolute;
+          top: 10%;
+          right: 10px;
+        }
+        &:hover {
+          background-color: $button-color;
+          transition: 1s all ease;
+          color: #fff;
+        }
+      }
+    }
+
+    form {
+      border-radius: 10px;
+      position: relative;
+      margin-left: 30px;
+      input {
+        background-color: $body-color;
+        // background-color: red;
+        padding-left: 10px;
+        border-radius: 10px;
+
+        // width: 100%;
+        height: 40px;
+      }
+      .search img {
+        width: 15px;
+        position: absolute;
+        top: 30%;
+        right: 10px;
+        // transform: translateY(-50%);
+        cursor: pointer;
+      }
+    }
+  }
+
+  .icons {
+    // margin-left: 40px;
+    display: flex;
+    img {
+      width: 30px;
+      padding-left: 15px;
+      cursor: pointer;
+    }
+  }
+
+  .buttons {
+    display: flex;
+    align-items: flex-end;
+    justify-content: flex-end;
+  }
+
+  .sort1 {
+    display: flex;
+    justify-content: space-between;
+    color: $button-color;
+    font-size: 1rem;
+    width: 100px;
+    // height: 50px;
+    padding: 5px 10px;
+    border-radius: 10px;
+    border: 1px solid $button-color;
+    background-color: #fff;
+    // margin-right: 10px;
+    display: none;
+    .arrow-display {
+      font-size: 1rem;
+    }
+  }
+
+  .select-all {
+    button {
+        display: flex;
+        justify-content: space-evenly;
+        align-items: center;
+      width: 100px;
+      // padding-right: 5px;
+      height: 40px;
+      background-color: #fff;
+      border-radius: 10px;
+      color: $button-color;
+      border: 1px solid $button-color;
+
+      &:hover {
+        background-color: $button-color;
+        color: #fff;
+        transition: 1s all ease;
+      }
+    }
+    #checkbox {
+      width: 20px;
+      // border: 5px soild $button-color !important;
+    }
+  }
+
+  .download {
+    margin-left: 20px;
+    button {
+      width: 100px;
+      // padding-right: 5px;
+      height: 40px;
+      background-color: $button-color;
+      border-radius: 10px;
+      color: #fff;
+      // border: 1px solid $button-color;
+
+      &:hover {
+        background-color: #fff;
+        color: $button-color;
+        transition: 1s all ease;
+        border: 1px solid $button-color;
+      }
+    }
+  }
+}
+
+@media only screen and (min-width: 280px) and (max-width: 310px) {
+  .container {
+    width: 110%;
+  }
+
+  .container-wrapper {
+    .icons-wrapper {
+      .icons {
+        img {
+          width: 30px;
+        }
+        #preview {
+          display: none;
+        }
+      }
+      form {
+        .search {
+          img {
+            width: 13px;
+          }
+        }
+      }
+    }
+
+    #form {
+      margin-left: 30px;
+      width: 150px;
+      font-size: 0.8em;
+    }
+
+    .buttons {
+      .select-all {
+        button {
+          width: 70px;
+          font-size: 0.6rem;
+          font-weight: 800;
+          display: flex;
+          justify-content: space-evenly;
+          align-items: center;
+        }
+      }
+
+      .sort1 {
+        width: 75px;
+        font-size: 0.6rem;
+        font-weight: 800;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+      }
+
+      .download {
+        button {
+          width: 60px;
+          font-size: 0.6rem;
+          font-weight: 900;
+        }
+      }
+    }
+  }
+}
+
+@media only screen and (min-width: 320px) and (max-width: 350px) {
+  .container {
+    width: 105%;
+  }
+  .container-wrapper {
+    .icons-wrapper {
+      // .icons{
+      //     img{
+      //       width: 30px;
+      //     }
+      #preview {
+        display: none;
+      }
+
+      form {
+        // input {
+          width: 170px;
+        //   margin-left: 10px;
+        // }
+      }
+
+    // #form{
+    //     width: 100px;
+    // }
+    }
+    .buttons {
+      .select-all {
+        button {
+          width: 75px;
+          font-size: 0.7em;
+          display: flex;
+          justify-content: space-evenly;
+          align-items: center;
+          font-weight: 700;
+        }
+      }
+
+      .sort1 {
+        width: 80px;
+        font-size: 0.7em;
+        display: flex;
+        justify-content: space-around;
+        align-items: center;
+        font-weight: 700;
+      }
+
+      .download{
+        button{
+            width: 75px;
+            font-size: 0.7em;
+            font-weight: 700;
+        }
+      }
+    }
+
+    
+  }
+}
+
+@media only screen and (min-width: 360px) and (max-width: 390px){
+    .container-wrapper {
+        .icons-wrapper{
+            #preview{
+                display: none;
+            }
+        }
+    
+
+    .buttons{
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        .select-all{
+            button{
+                width: 85px;
+                font-size: 0.8rem;
+                display: flex;
+                justify-content: space-evenly;
+                align-items: center;
+                font-weight: 700;
+            }
+        }
+        .sort1{
+            width: 85px;
+            font-size: 0.8rem;
+            font-weight: 700;
+            display: flex;
+            justify-content: space-evenly;
+            align-items: center;
+        }
+
+        .download{
+            button{
+                width: 80px;
+                font-size: 0.8rem;
+                font-weight: 700;
+            }
+        }
+    }
+    }
+}
+
+@media only screen and (min-width: 375px) and (max-width: 400px) {
+  .container {
+    width: 100%;
+  }
+  .container-wrapper {
+    .icons-wrapper{
+        #preview{
+            display: none;
+        }
+
+        form{
+            // input{
+                margin-left: 40px;
+            // }
+        }
+    }
+
+
+    .buttons {
+      .download {
+        button {
+          width: 80px;
+          font-size: 0.9rem;
+          //   font-weight: 900;
+          //   padding: 0 15px;
+        }
+      }
+
+      .sort1 {
+        display: flex;
+        justify-content: space-between;
+        justify-content: center;
+        // padding-top: 10px;
+        width: 90px;
+        font-size: 0.8rem;
+        font-weight: 900;
+      }
+      .select-all {
+        button {
+          width: 85px;
+          padding: 0px 3px;
+          font-size: 0.9rem;
+          // font-weight: 800;
+        }
+      }
+    }
+  }
+}
+
+@media only screen and (max-width: 480px) {
+  .container-wrapper {
+    // #preview{
+    //     display: none;
+    // }
+    .icons-wrapper {
+        #preview{
+            display: none
+        }
+      form {
+        // margin-left: 30px;
+        margin-left: 20px;
+
+        input {
+          width: 100%;
+        }
+      }
+    }
+    #sort {
+      .sort-by {
+        display: none !important;
+      }
+    }
+
+    .sort1 {
+      display: flex;
+      justify-content: space-between;
+      color: $button-color;
+      font-size: 1rem;
+      width: 100px;
+      // height: 50px;
+      padding: 5px 10px;
+      border-radius: 10px;
+      border: 1px solid $button-color;
+      background-color: #fff;
+      margin-left: 30px;
+      display: block;
+      .arrow-display {
+        font-size: 1rem;
+      }
+    }
+
+    // .buttons {
+    //   .download {
+    //     button {
+    //       //   width: 100px;
+    //     }
+    //   }
+    // }
+  }
+}
+
+@media only screen and (min-width: 540px) and (max-width:600px){
+    .container-wrapper{
+        .icons-wrapper{
+            .icons{
+                img{
+                    width: 35px; 
+                }
+                
+            }
+
+         form{
+            input{
+width: 250px;
+margin-left: 55px;
+            }
+
+            
+         }
+         #sort{
+            display: none;
+        }
+        }
+
+        .buttons {
+            margin-top: 30px;
+            margin-left: 35px;
+            .select-all {
+                button{
+                    width: 120px;
+                    display: flex;
+                    justify-content: space-evenly;
+                    align-items: center;
+                    font-weight: 700;
+                }
+            }
+
+            .sort1{
+                margin-left: 20px;
+                display: block;
+                width: 120px;
+                // margin-left: 30px;
+                font-weight: 700;
+            }
+
+            .download{
+                button{
+                    width: 120px;
+                    font-weight: 700;
+                    // margin-left: 30px;
+                }
+            }
+        }
+    }
+}
+
+@media only screen and (min-width: 768px) and (max-width: 1023px) {
+  .container-wrapper {
+    .icons-wrapper {
+      .first-wrapper {
+        flex-wrap: nowrap;
+      }
+      form {
+        input {
+          width: 120px;
+          font-size: 0.7em;
+        }
+      }
+      #sort {
+        // width: 100px;
+        .sort-by {
+          width: 185px;
+          font-size: 0.7rem;
+          font-weight: 800;
+          padding: 8px;
+        }
+      }
+    }
+
+    .buttons {
+      .select-all {
+        button {
+          width: 70px;
+          font-size: 0.7rem;
+          font-weight: 800;
+          // input{
+          //     width: 10px;
+          // }
+          // margin-left: 25px;
+        }
+        // width: 25px;
+        // font-size: 0.8rem;
+      }
+      .download {
+        button {
+          width: 65px;
+          font-size: 0.7rem;
+          font-weight: 800;
+        }
+      }
+    }
+  }
+}
+
+// .sort-by{
+// }
