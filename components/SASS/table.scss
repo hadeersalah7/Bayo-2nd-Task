@@ -162,7 +162,15 @@ td{
 .table-image{
     width: 40%;
 }
+.newSpanRow{
+    display: flex;
+    flex-wrap: wrap;
+    .spans span{
+        color: red;
+        font-size: 0.7rem
 
+    }
+}
 }   
 
 
@@ -201,6 +209,13 @@ td{
     .check-box{
         padding-left: 8%;
     }
+
+    // .spans {
+    //     display: none;
+    // }
+    // .published-time{
+    //     display: block
+    // }
 }
 @media only screen and (min-width: 768px) and (max-width: 1024px) {
     .containerTable{
@@ -232,6 +247,10 @@ td{
 
         .table-image{
             width: 60%;
+        }
+
+        .spans span{
+            display: none;
         }
     }
 

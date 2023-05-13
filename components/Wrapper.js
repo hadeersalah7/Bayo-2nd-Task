@@ -26,6 +26,12 @@ const Wrapper = () => {
     const handleCheckAll = () => {
         setIsChecked(!isChecked);
       };
+
+// const [showPDF, setShowPdf] = useState(false)
+
+// const handleListViewClick = () => {
+//     setShowPdf(true)
+// }
   return (
     <>
       <div className="container">
@@ -34,10 +40,15 @@ const Wrapper = () => {
             {/* <Col xs={2}> */}
             <div className="icons-wrapper">
               <div className="icons">
+                {/* <div style={{display: showPDF ? 'none' : 'block'}}> */}
                 <img src={listView} id="listView" alt="list-view-logo" />
                 <img src={preview} id="preview" alt="preview" />
                 <img src={titles} id="title" />
-                
+                {/* </div>                 */}
+                {/* <div style={{ display: showPDF ? 'block' : 'none' }}>
+        
+      </div> */}
+
               </div>
               <div id="form">
                 <form id="form-input">
@@ -50,7 +61,12 @@ const Wrapper = () => {
               
 
             <div id="sort">
-
+              {/* <button className="sort-by">
+                sort by: published descending
+                <span>
+                  <i className="ri-arrow-down-s-fill"></i>
+                </span>
+              </button> */}
 
 <button className="sort-by" onClick={handleSortClick}>
           {sortOrder.column === 'publishedDate' ? (
@@ -100,7 +116,7 @@ const Wrapper = () => {
               </div>
             </div>
           </div>
-          <Table isChecked={isChecked} handleCheckAll={handleCheckAll} sortOrder={sortOrder} handleSortClick= {handleSortClick}/>
+          <Table isChecked={isChecked} handleCheckAll={handleCheckAll} />
         </div>
       </div>
     </>

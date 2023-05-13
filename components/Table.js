@@ -128,7 +128,12 @@ const handelSort = (column) => {
                     <tr key={index}>
                     {/* 1 */}
                 <td><img src={row.icon} className="table-image"/></td>
-                <td className="sample">{row.name}</td>
+                <td className="sample">{row.name}
+                  </td>
+
+                {/* <td className="newSpanRow"> 
+                <div className="spans"><span className="span1"><i class="ri-arrow-up-circle-line"></i> 15.11.21</span><span className="span2"><i class="ri-arrow-down-circle-line"></i>12.12.2012</span></div>
+                </td> */}
                 <td className="published-time">{row.publishedDate}</td>
                 <td className="downloaded-time">{row.lastDownload}</td>
                 <td className="check-box"><input type="checkbox" checked={isChecked} /></td>
