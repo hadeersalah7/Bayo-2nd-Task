@@ -248,6 +248,23 @@
     }
 }
 
+@media only screen and (min-width: 360px) and (max-width: 380px){
+.nav{
+    .logos{
+        .setting{
+            .btn1 {
+                width: 40px;
+            }
+        }
+        .logout{
+            .btn2{
+                width: 40px;
+            }
+        }
+    }
+}
+}   
+
 @media only screen and (min-width: 412px) and (max-width: 413px) {
     .nav{
         .setting{
