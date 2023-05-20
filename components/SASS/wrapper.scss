@@ -27,16 +27,16 @@
     // background-color: red;
 
     #sort {
-      margin-left: 30px;
+      margin-left: 20px;
 
       .sort-by {
         display: flex;
         justify-content: flex-start;
-        padding: 5px 15px;
+        padding: 2px 20px;
         width: 250px;
-        height: 40px;
+        height: 30px;
         // padding: 3px;
-        border-radius: 10px;
+        border-radius: 7px;
         border: 2px solid $button-color;
         background-color: #fff;
         color: $button-color;
@@ -45,14 +45,10 @@
         span {
           font-size: 20px;
           position: absolute;
-          top: 10%;
-          right: 10px;
+          top: -5%;
+          right: 5px;
         }
-        &:hover {
-          background-color: $button-color;
-          transition: 1s all ease;
-          color: #fff;
-        }
+        
       }
     }
 
@@ -60,15 +56,21 @@
       border-radius: 10px;
       position: relative;
       margin-left: 30px;
+     
       input {
         background-color: $body-color;
         // background-color: red;
         padding-left: 10px;
-        border-radius: 10px;
+        border-radius: 7px;
 
         // width: 100%;
-        height: 40px;
+        height: 30px;
+        &:focus{
+            border: 2px solid $button-color ;
+        }
       }
+
+
       .search img {
         width: 15px;
         position: absolute;
@@ -83,19 +85,70 @@
   .icons {
     // margin-left: 40px;
     display: flex;
+    
+   
     img {
       width: 30px;
       padding-left: 15px;
       cursor: pointer;
+
+    //   doing active focuse on icons
+    //   &:active{
+    //     background-color: red;
+    //     padding: 1px 3px;
+    //   }
+  
     }
+    
   }
 
   .buttons {
     display: flex;
     align-items: flex-end;
     justify-content: flex-end;
+  
+
+ 
+
+  .select-all {
+    button {
+        display: flex;
+        justify-content: space-evenly;
+        align-items: center;
+      width: 110px;
+      // padding-right: 5px;
+      height: 30px;
+      background-color: #fff;
+      border-radius: 10px;
+      color: $button-color;
+      border: 2px solid $button-color;
+      font-size: 0.9rem; 
+     font-weight: 900;
+
+    }
+    #checkbox {
+      width: 15px;
+      // border: 5px soild $button-color !important;
+    }
   }
 
+  .download {
+    margin-left: 20px;
+    button {
+      width: 110px;
+      // padding-right: 5px;
+      height: 30px;
+      background-color: $button-color;
+      border-radius: 10px;
+      font-size: 0.9rem;
+      font-weight: 900;
+      color: #fff;
+      margin-right: 16px;
+      // border: 1px solid $button-color;
+
+      
+    }
+  }
   .sort1 {
     display: flex;
     justify-content: space-between;
@@ -113,52 +166,81 @@
       font-size: 1rem;
     }
   }
-
-  .select-all {
-    button {
-        display: flex;
-        justify-content: space-evenly;
-        align-items: center;
-      width: 100px;
-      // padding-right: 5px;
-      height: 40px;
-      background-color: #fff;
-      border-radius: 10px;
-      color: $button-color;
-      border: 1px solid $button-color;
-
-      &:hover {
-        background-color: $button-color;
-        color: #fff;
-        transition: 1s all ease;
-      }
-    }
-    #checkbox {
-      width: 20px;
-      // border: 5px soild $button-color !important;
-    }
-  }
-
-  .download {
-    margin-left: 20px;
-    button {
-      width: 100px;
-      // padding-right: 5px;
-      height: 40px;
-      background-color: $button-color;
-      border-radius: 10px;
-      color: #fff;
-      // border: 1px solid $button-color;
-
-      &:hover {
-        background-color: #fff;
-        color: $button-color;
-        transition: 1s all ease;
-        border: 1px solid $button-color;
-      }
-    }
-  }
 }
+
+
+.sort-container {
+    position: relative;
+    font-size: 14px;
+    // font-weight: 900;
+  }
+  .sort-dropdown {
+    background-color: #fff;
+    border-radius: 7px;
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+    left: 0;
+    padding: 8px;
+    border: 2px solid $button-color;
+    color: $button-color;
+    position: absolute;
+    top: 100%;
+    width: 250px;
+    cursor: pointer;
+    z-index: 1;
+    hr{
+        background-color: $button-color;
+        height: 1px;
+        font-weight: bold;
+    }
+  }
+ 
+
+
+}
+
+.image-wrapper{
+    width: 40%;
+    margin-top: 45px;
+    border-radius: 10px;
+    background-color: $body-color;
+    
+}   
+
+.form-wrapper{
+    width: 40%;
+    background-color: $body-color;
+    border-radius: 10px;
+    margin-top: 30px;
+    // display: block;
+   padding-top: 10%;
+//    border-bottom: 10px solid $body-color;
+   h2 {
+    color: hsla(0, 2%, 57%, 0.704);
+    font-size: 1rem;
+    text-align: center;
+    font-weight: 500;
+   }
+    p{
+        text-align: center;
+        color: hsla(0, 2%, 57%, 0.704);
+
+    }
+}
+
+
+.title-container{
+    background-color: $body-color;
+    width: 150px;
+    height: 150px;
+    margin: 20px 0 0 22px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 10px;
+    position: relative;
+  
+}
+
 
 @media only screen and (min-width: 280px) and (max-width: 310px) {
   .container {
@@ -203,22 +285,27 @@
       }
 
       .sort1 {
-        width: 75px;
-        font-size: 0.6rem;
+        width: 75px !important;
+        height: 30px;
+        font-size: 0.6rem !important;
         font-weight: 800;
         display: flex;
         justify-content: space-between;
         align-items: center;
+        // padding-bottom: 3px;
       }
 
-      .download {
+     
+       .download {
         button {
-          width: 60px;
-          font-size: 0.6rem;
-          font-weight: 900;
+            // margin-right: 100px;
+          width: 70px !important;
+          font-size: 0.6rem !important;
+          font-weight: 600;
         }
       }
     }
+   
   }
 }
 
@@ -239,15 +326,20 @@
       form {
         // input {
           width: 170px;
-        //   margin-left: 10px;
-        // }
+        
       }
 
-    // #form{
-    //     width: 100px;
-    // }
+    
     }
     .buttons {
+        .sort1 {
+            width: 85px !important;
+            font-size: 0.7rem !important;
+            display: flex !important;
+            justify-content: space-evenly;
+            align-items: center;
+            font-weight: 700;
+          }
       .select-all {
         button {
           width: 75px;
@@ -259,14 +351,7 @@
         }
       }
 
-      .sort1 {
-        width: 80px;
-        font-size: 0.7em;
-        display: flex;
-        justify-content: space-around;
-        align-items: center;
-        font-weight: 700;
-      }
+      
 
       .download{
         button{
@@ -308,7 +393,7 @@
             width: 85px;
             font-size: 0.8rem;
             font-weight: 700;
-            display: flex;
+            display: flex !important;
             justify-content: space-evenly;
             align-items: center;
         }
@@ -343,32 +428,42 @@
 
 
     .buttons {
+        display: flex;
+        justify-content: space-evenly;
+        align-items: center;
+        .sort1 {
+            display: flex !important;
+            justify-content: space-around;
+            justify-content: center;
+            // padding-top: 10px;
+            margin-right: 10px;
+            // margin-left: -1px;
+    height: 30px;
+            width: 95px !important;
+            font-size: 0.8rem;
+            font-weight: 900;
+          }
+
+          .select-all {
+            button {
+              width: 90px;
+              padding: 0px 3px;
+              font-size: 0.9rem;
+              // font-weight: 800;
+            }
+          }
+
       .download {
         button {
-          width: 80px;
+          width: 90px;
           font-size: 0.9rem;
           //   font-weight: 900;
           //   padding: 0 15px;
         }
       }
 
-      .sort1 {
-        display: flex;
-        justify-content: space-between;
-        justify-content: center;
-        // padding-top: 10px;
-        width: 90px;
-        font-size: 0.8rem;
-        font-weight: 900;
-      }
-      .select-all {
-        button {
-          width: 85px;
-          padding: 0px 3px;
-          font-size: 0.9rem;
-          // font-weight: 800;
-        }
-      }
+      
+      
     }
   }
 }
@@ -389,19 +484,20 @@
     }
 
     .buttons{
-        .select-all{
-            button{
-                width: 90px;
-            }
-        }
         .sort1{
-            display: flex;
+            display: flex !important;
             justify-content:  space-between;
             align-items: center;
             font-size: 0.9rem;
             font-weight: 500;
             margin-right: 10px;
         }
+        .select-all{
+            button{
+                width: 90px;
+            }
+        }
+        
     }
 }
 }   
@@ -432,7 +528,7 @@
         }
       form {
         // margin-left: 30px;
-        margin-left: 20px;
+        margin-left: 35px;
 
         input {
           width: 100%;
@@ -445,23 +541,28 @@
       }
     }
 
+   .buttons{
     .sort1 {
-      display: flex;
-      justify-content: space-between;
-      color: $button-color;
-      font-size: 1rem;
-      width: 100px;
-      // height: 50px;
-      padding: 5px 10px;
-      border-radius: 10px;
-      border: 1px solid $button-color;
-      background-color: #fff;
-      margin-left: 30px;
-      display: block;
-      .arrow-display {
-        font-size: 1rem;
+        display: flex !important;
+        justify-content: space-evenly;
+        align-items: center;
+        color: $button-color;
+        font-size: 0.9rem;
+        width: 110px;
+        height: 30px;
+        padding: 2px 10px;
+        border-radius: 10px;
+        border: 2px solid $button-color;
+        font-weight: 800;
+        background-color: #fff;
+        margin-right: 20px;
+        display: block;
+        .arrow-display {
+          font-size: 1rem;
+        }
       }
-    }
+   }
+    
 
     // .buttons {
     //   .download {
@@ -536,30 +637,37 @@ margin-left: 55px;
       }
       form {
         input {
-          width: 120px;
+          width: 100px;
           font-size: 0.7em;
         }
       }
       #sort {
         // width: 100px;
         .sort-by {
-          width: 185px;
-          font-size: 0.7rem;
-          font-weight: 800;
-          padding: 8px;
+          width: 180px;
+          font-size: 0.6rem;
+          font-weight: 900;
+          padding: 6px 8px;
+        //   padding: 8px;
+        span{
+            font-size: 15px;
+            top: 9%;
+            right: 6px;
+            }
         }
+        
       }
     }
 
     .buttons {
       .select-all {
         button {
-          width: 70px;
-          font-size: 0.7rem;
+          width: 65px;
+          font-size: 0.6rem;
           font-weight: 800;
-          // input{
-          //     width: 10px;
-          // }
+          #checkbox{
+              width: 10px;
+          }
           // margin-left: 25px;
         }
         // width: 25px;
@@ -568,8 +676,9 @@ margin-left: 55px;
       .download {
         button {
           width: 65px;
-          font-size: 0.7rem;
-          font-weight: 800;
+          font-size: 0.6rem;
+          font-weight: 900;
+          margin-right: 15px;
         }
       }
     }

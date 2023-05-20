@@ -11,8 +11,8 @@ import { useState } from "react";
 function Acme() {
   return (
     // <div className='nav-container'>
-    <div className="acme">
-      <img src={imaginaryBrand} id="brand" alt="brand-image" />
+    <div className="acme ">
+      <img src={imaginaryBrand} className="brand" alt="brand-image" />
       <h5 className="nav-head">ACME GmbH</h5>
     </div>
     //   </div>
@@ -21,8 +21,15 @@ function Acme() {
 
 function Nav() {
   const [showDropdown, setShowDropdown] = useState(false);
+  const [colorScheme, setColorScheme] = useState("default")
+  const [dropdownActive, setDropdownActive] = useState(false);
+  
+
   const toggleDropdown = () => {
     setShowDropdown(!showDropdown);
+    setColorScheme(showDropdown ? "default" : "dropdown")
+    setDropdownActive(!dropdownActive)
+    
   };
 
   return (
@@ -32,8 +39,9 @@ function Nav() {
           <div className="nav">
             {/* <Col xs={6}> */}
             <div className="nav-container">
-              <div className="acme">
-                <span onClick={toggleDropdown}>
+              <div className="acme" >
+              {/* <Acme className={colorScheme === "dropdown" ? "wheat-white" : ""} /> */}
+                <span onClick={toggleDropdown} className="dropdown-span">
                   <i
                     className={`ri-arrow-${
                       showDropdown ? "up" : "down"
@@ -41,16 +49,18 @@ function Nav() {
                     id="arrow"
                   ></i>
                 </span>
-                {/* <img src={arrow} id="arrow"/> */}
-                {/* <img src={imaginaryBrand} id="brand"/>
-        <h5 className="nav-head">ACME GmbH</h5> */}
+                
                 <Acme />
               </div>
               {showDropdown && (
-                <div className="dropdown-container">
-                  {[...Array(12)].map((_, index) => (
+                <div className={`dropdown-container ${colorScheme === "dropdown" ? "white-background" : ""}`}>
+                  {[...Array(20)].map((_, index) => (
                     <div className="dropdown-item" key={index}>
-                      <Acme />
+                      {/* <Acme className={`acme ${dropdownActive ? "blue-acme" : ""}`}  /> */}
+                        <div className="acme-contents">
+                        <img src={imaginaryBrand} className="brand" alt="brand-image" />
+                         <p className="acme-head">ACME GmbH</p>
+                        </div>
                     </div>
                   ))}
                 </div>
