@@ -7,12 +7,13 @@ function App() {
     <Nav />
     <div className='container header-container'>
     <h3 id="welcome">Welcome Tim</h3>
-    <p id="collection">In The Collection Below You Can Find And Download All Available Documents For Your Client.</p>
+    <p id="collection">In the collection below you can find and download all available documents for your client.</p>
     </div>
     <Wrapper />
     </div>
   );
 }
+
 
 
 
