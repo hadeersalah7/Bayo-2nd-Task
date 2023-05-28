@@ -1,4 +1,4 @@
-import { Row, Col } from "react-bootstrap";
+// import { Row, Col } from "react-bootstrap";
 import { useState } from "react";
 import "./SASS/table.scss";
 // import download from "./Images/download.svg";
@@ -8,7 +8,7 @@ import "./SASS/table.scss";
 // import pdfIcon from './Images/pdf_icon.svg';
 // import imageIcon from './Images/image_icon.svg';
 import { useEffect } from "react";
-const Table = ({ isChecked, tableWidth, searchForm, handleCheckAll  }) => {
+const Table = ({ isChecked, tableWidth, searchForm, handleCheckAll,  }) => {
     const [data, setData] = useState([]);
 
     useEffect(() => {

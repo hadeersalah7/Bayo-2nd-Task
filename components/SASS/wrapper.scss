@@ -3,6 +3,7 @@
 .container {
   width: 100%;
   height: auto;
+  // position: relative;
 }
 
 .container-wrapper {
@@ -21,11 +22,16 @@ img{
 .col-1{
     display:flex;
     justify-content: space-evenly;
+    align-items: center;
     
 
 }
 
 .active-icons{
+  img {
+    width: 15px;
+    height: 15px;
+  }
 .active {
     display: inline-flex;
     height: 30px;
@@ -309,8 +315,8 @@ img{
     background-color: $body-color;
     width: 160px ;
     height: 180px;
-    // margin: 25px 70px 0 7px !important;
     display: flex;
+    margin-bottom: 25px !important;
     // justify-content: center;
     // align-items: center;
     border-radius: 10px;
@@ -366,6 +372,9 @@ img{
     }
 .small-check{
         position: relative;
+        position: absolute;
+        top: 5%;
+        left: 10%;
       
         &::before {
           content: '';
@@ -382,10 +391,19 @@ img{
 
       .price-container{
         position: absolute;
-        bottom: -70%;
+        bottom: -60%;
         margin-bottom: 50px
       }  
+.price-text{
+  font-size: 0.9rem;
+}
 
+.pose{
+  position: absolute;
+  display: inline-block;
+ bottom: 5%;
+ left: 9%;
+}
 @media only screen and (min-width: 280px) and (max-width: 310px) {
   .container {
     width: 110%;
@@ -502,8 +520,11 @@ img{
   
   } 
 
-
-
+  .price-container{
+    position: absolute;
+    bottom: -75%;
+    margin-bottom: 50px
+  }  
   }
 }
 
@@ -596,7 +617,7 @@ img{
     position: relative;  
     
     .img1{
-        width: 40px !important;
+        width: 40px ;
     }
 
     .tool-image{
@@ -615,6 +636,11 @@ img{
 }
 
 } 
+.price-container{
+  position: absolute;
+  bottom: -75%;
+  margin-bottom: 50px
+}  
 }
 }
     
@@ -841,7 +867,7 @@ img{
   }
 }
 
-@media only screen and (min-width: 393px) and (max-width: 395px){
+@media only screen and (min-width: 390px) and (max-width: 395px){
 
 .container-wrapper{
     .icons-wrapper{
@@ -874,9 +900,14 @@ img{
         }
         
     }
+
+    .title-container{
+      width: 90px !important;
+      
+    }
 }
 }   
-@media only screen and (min-width: 412px) and (max-width: 414px) {
+@media only screen and (min-width: 412px) and (max-width: 415px) {
     .container-wrapper{
         .icons-wrapper{
             form {
@@ -911,8 +942,8 @@ img{
   align-items: center;
 .title-container{
   background-color: $body-color;
-  width: 100px !important;
-  height: 160px;
+  width: 90px !important;
+  height: 140px;
   margin: 25px 0px 0 0px;
   display: flex;
   justify-content: center;
@@ -990,7 +1021,9 @@ img{
     top: 50px;
 }
 
-
+.title-container{
+  width: 100px !important; 
+}
   }
 }
 
@@ -1061,10 +1094,19 @@ img{
 
 
 .active-icons{
+
+  img{
+    width: 10px;
+    height: 10px;
+  }
   display: flex;
   justify-content: space-evenly;
   align-items: center;
   padding:0;
+  .active{
+    height: 20px;
+    width: 20px;
+  }
 }
 
       #form {
@@ -1142,9 +1184,9 @@ img{
       // margin-right: 15px;
     .title-container{
         background-color: $body-color;
-        width: 120px;
+        width: 114px;
         height: 160px;
-        margin: 25px 20px 0 10px;
+        margin: 25px 0px 0 10px;
         display: flex;
         justify-content: center;
         align-items: center;
@@ -1233,6 +1275,45 @@ img{
           left: 1px !important;
           top: 50px;
       }
-    // }
+
+     
 }
 
+@media only screen and (min-width: 1440px) and (max-width: 2560px) {
+  .title-view{
+    .title-container{
+      width: 125px ;
+      height: 165px ;
+
+      .tool-image{
+        width: 18px !important;
+        left: 2px !important
+      }
+        .img1{
+          
+            width: 60px !important;
+      }
+    }
+  }
+  
+  .price-container{
+    position: absolute;
+    bottom: -55%;
+    margin-bottom: 40px
+  }  
+.price-text{
+  font-size: 1rem ;
+}
+
+.small-check{
+  width: 15px !important;
+  height: 15px !important;
+  &:before{
+      width:15px !important;
+      height: 15px !important;
+  }
+}
+
+
+
+}

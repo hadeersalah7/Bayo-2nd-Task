@@ -118,8 +118,6 @@ const Wrapper = () => {
 
                     <span className={activeIcon === 'preview' ? 'active' : ''}>
                     <img
-                    width={15}
-                    height={15}
                       src={listView}
                       id="listView"
                       alt="list-view-logo"
@@ -128,8 +126,6 @@ const Wrapper = () => {
                     </span>
                     <span className={activeIcon=== "list" ? "active" : ""}>
                     <img
-                    width={15}
-                    height={15}
                       src={preview}
                       id="preview"
                       alt="preview"
@@ -138,8 +134,6 @@ const Wrapper = () => {
                     </span>
                     <span className={activeIcon === "title" ? "active" : ""}>
                     <img
-                    width={15}
-                    height={15}
                       src={titles}
                       
                       id="title"
@@ -168,7 +162,7 @@ const Wrapper = () => {
                     <div className="sort-container">
                       <button className="sort-by" onClick={handleButtonClick}>
                         sort by: {sortOption}
-                        {sortDirection === "asc" ? "Ascending" : "Descending"}
+                        {sortDirection === "asc" ? " Ascending" : " Descending"}
                         <span>
                           {sortOrder.column === "publishedDate" &&
                             (sortOrder.direction === "asc" ? (
@@ -274,12 +268,17 @@ const Wrapper = () => {
                    <Card data={data} isChecked={isChecked}/>
                   
                 ) : (
+                  <div>
+                    
                   <Table
                     isChecked={isChecked}
                     handleCheckAll={handleCheckAll}
                     tableWidth={tableWidth}
                     searchForm={searchForm}
+                    // handleSort = {handleSort}
                   />
+
+                  </div>
                 )}
               </div>
 
@@ -294,11 +293,13 @@ const Wrapper = () => {
                   <input
                     type="file"
                     accept="application/pdf"
-                    onChange={handleFileInputChange}
+                    onChange={handleFileInputChange} 
                   />
+                  
+                  
 
                   {file && (
-                    <div style={{ width: "100%", height: "300px" }}>
+                    <div style={{ width: "100%", height: "300px"  }}>
                       <Document file={file} />
                     </div>
                   )}
