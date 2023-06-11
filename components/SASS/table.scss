@@ -96,14 +96,6 @@
   }
 }
 
-// input[type="checkbox"] {
-//     width: 17px;
-//     height: 17px;
-//     &:beforer{
-//         content: "";
-//         outline: 1px solid $button-color;
-//     }
-//   }
 
 .hidden-spans {
   display: none;
@@ -117,8 +109,9 @@ td {
   .containerTable {
     margin-top: 5px;
     .sample {
-      font-size: 0.7rem;
-      width: 80%;
+      font-size: 0.6rem;
+      
+      // width: 90%;
       padding-left: 0px;
     }
 
@@ -128,12 +121,12 @@ td {
   }
 
   .check-box {
-    padding-left: 9% !important;
+    padding-left: 2% !important;
   }
 
   .hidden-spans {
     display: block;
-    font-size: 10px;
+    font-size: 7px;
     display: flex;
     align-items: flex-start;
     span {
@@ -221,7 +214,7 @@ td {
     }
 
     .check-box {
-      padding-left: 3%;
+      padding-left: 7%;
     }
 
     .hidden-spans {

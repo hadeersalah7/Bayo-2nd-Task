@@ -1,9 +1,11 @@
 import "./SASS/nav.scss";
 // import arrow from "./Images/arrow.svg";
 // import imaginaryBrand from "./Images/imaginary_brand.svg";
+// import Settings from './Settings'
 import settinIcon from "./Images/settings.svg";
 import logout from "./Images/logout.svg";
 import bayoLogo from "./Images/logo_black_font_without_border(o).png"
+import { Link } from "react-router-dom";
 // import { useState } from "react";
 
 // function to render the acme contents multiple times when i click on them from the dropdown arrow:
@@ -71,14 +73,16 @@ function Nav() {
             <div className="logos">
               <div className="setting">
                 <button className="btn1">
+                  <Link to='/settings'>
                   <img src={settinIcon} className="logo1" alt="setting" />
                   <span>Settings</span>
+                  </Link>
                 </button>
               </div>
 
               <div className="logout">
                 <button className="btn2">
-                  <img src={logout} className="logout-logo" />
+                  <img src={logout} className="logout-logo" alt=""/>
                   <span>Logout</span>
                 </button>
               </div>

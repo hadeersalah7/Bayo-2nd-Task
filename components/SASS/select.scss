@@ -1,0 +1,50 @@
+@import './basic.scss';
+
+.select {
+    position: relative;
+    width: 40px;
+    top: 25px;
+    left: 50%;
+    font-weight: 900;
+
+  }
+  
+  .select select {
+    appearance: none;
+    background-color: $body-color;
+    border: none !important;
+    color: $default-color;
+    cursor: pointer;
+    font-size: 13px;
+    // transition: all 0.3s ease-in-out;
+    font-weight: 900;
+    width: 40px;
+    
+  }
+  
+  .select.open select {
+    border-bottom: none;
+    border-top-left-radius: 5px;
+    border-top-right-radius: 5px;
+    // box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+  }
+  
+  .select span {
+    position: absolute;
+    right: 0;
+    top: 2px;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    cursor: pointer;
+  }
+  
+  .select span i {
+    font-size: 25px;
+    // transition: all 0.3s ease-in-out;
+  }
+  
+//   .select.open span i {
+//     transform: rotate(180deg);
+//   }

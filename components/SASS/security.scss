@@ -1,0 +1,113 @@
+@import './basic.scss';
+
+.security-wrapper{
+    width: 400px;
+    height: auto;
+    background-color: #fff;
+    margin-top: 40px;
+    border-radius: 12px;
+
+    .security-header {
+        font-size: 20px;
+        display: flex;
+        justify-content: center;
+        padding-top: 30px;
+        font-weight: 500;
+    }
+
+    .paragraph{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        text-align: center;
+        font-size: 14px;
+        font-weight: 500;
+        padding-top: 10px;
+    }
+
+    .current{
+        font-size: 15px;
+        padding-top: 10px;
+        font-weight: 900;
+        display: flex;
+        justify-content: center;
+    }
+
+    .auth{
+        font-size: 14px;
+        display: flex;
+        justify-content: center;
+        padding-top: 0;
+    }
+
+
+    .change{
+      display: flex;
+      justify-content: space-around;
+      padding: 20px 0 50px 0;
+      a {
+        text-decoration: none;
+        font-size: 12px;
+        color: $button-color;
+        font-weight: 900;
+    }
+
+    button {
+        // text-transform: uppercase;
+        width: 130px;
+        color: #fff;
+        border-radius: 3px;
+        font-weight: 800;
+        height: 25px;
+        background-color: $button-color;
+        font-size: 11px;
+    }
+    }
+    
+}
+
+@media only screen and (min-width: 280px) and (max-width: 315px) {
+.security-wrapper{
+    width: 260px;
+
+.paragraph{
+font-size: 9px;
+font-weight: 900;
+}
+
+.current {
+    font-size: 12px;
+}
+
+.auth{
+    font-size: 9px;
+    font-weight: 900;
+}
+    .change {
+    a{
+        font-size: 10px;
+    }
+
+    button{
+        width: 100px;
+        font-size: 8px;
+        font-weight: 600;
+    }
+}
+
+
+}
+
+}
+
+@media only screen and (min-width: 320px) and (max-width: 359px) {
+.security-wrapper{
+    width: 300px;
+}
+}    
+
+@media only screen and (min-width: 375px) and (max-width: 389px) {
+.security-wrapper{
+    width: 350px;
+}
+}

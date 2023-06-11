@@ -1,22 +1,25 @@
-import './App.css';
-import Nav from './components/Nav'; 
-import Wrapper from './components/Wrapper';
+import "./App.css";
+import Wrapper from "./components/Wrapper";
+import Settings from "./components/Settings";
+import {
+  Route,
+  BrowserRouter as Router,
+  Routes,
+} from "react-router-dom";
+
 function App() {
   return (
-    <div className="App">
-    <Nav />
-    <div className='container header-container'>
-    <h3 id="welcome">Welcome Tim</h3>
-    <p id="collection">In the collection below you can find and download all available documents for your client.</p>
-    </div>
-    <Wrapper />
-    </div>
+    <>
+      <Router>
+        <div className="App">
+          <Routes>
+            <Route exact path="/" element={<Wrapper />} />
+            <Route exact path="/settings" element={<Settings />} />
+          </Routes>
+        </div>
+      </Router>
+    </>
   );
 }
-
-
-
-
-
 
 export default App;

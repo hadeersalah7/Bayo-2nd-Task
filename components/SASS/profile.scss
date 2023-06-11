@@ -1,0 +1,144 @@
+@import './basic.scss';
+
+// .wrapper {
+//     padding: 50px 50px;
+// }
+
+.profile-card{
+    width: 400px;
+    height: auto;
+    background-color: #fff;
+    border-radius: 12px;
+    margin-top: 40px;
+    padding-bottom: 50px;
+}
+
+.profile-header{
+    h5{
+      font-size: 1.3rem;
+    display: flex;
+    justify-content: center;
+    padding-top: 40px;
+    font-weight: 500;  
+    }
+    
+}
+
+.eye-password{
+    position: absolute;
+    top: 25%;     
+    right: 20px;
+    cursor: pointer;
+    &:hover {
+     color: $button-color;
+    }
+ }
+
+ form {
+    margin-top: 40px;
+    padding-right: 50px;
+    padding-left: 50px;
+    // display: flex;
+    width: 100%;
+    position: relative;
+    // align-items: center;
+    // flex-direction: column;
+    }
+    
+    .form-control {
+        
+        border-bottom-left-radius: 1px;
+        border-bottom-right-radius: 1px;
+        width: 100%;
+        color: $font-color;
+        background-color: $link-color;
+        &:focus {
+            background-color: $focus-color;
+            box-shadow: none !important;
+            outline: 0 !important;
+            border: none;
+            border-bottom: 3px solid $button-color;
+       
+        }
+        
+    }
+
+    label::after{
+        background-color: transparent !important;
+    }
+
+.save {
+    display: flex;
+    // width: 20%;
+                  background-color: $button-color;
+        width: 70px;
+        height: 30px;
+        justify-content: center;
+        align-items: center;
+        border-radius: 5px;
+        color: #fff;
+        font-weight: 500;
+        position: relative;
+        right:-110px;
+        // bottom: -20%;
+        top: 11px;
+    } 
+
+    @media only screen and (min-width: 280px) and (max-width: 315px) {
+.profile-card{
+    width: 260px;
+}
+
+.profile-header{
+    h5{
+      font-size: 0.9rem;  
+    }
+    
+}
+
+form {
+    padding-right: 30px;
+    padding-left: 30px;
+}
+
+.save {
+    right: -60px;
+}
+    }
+@media only screen and (min-width: 320px) and (max-width: 359px) {
+.profile-card{
+    width: 300px;
+}
+
+.profile-header{
+    h5{
+     font-size: 1.1rem; 
+     font-weight: 500;
+    }
+    
+}
+
+form{
+    padding-left: 30px;
+    padding-right: 30px;
+}
+
+.save {
+    right: -85px
+}
+}    
+
+@media only screen and (min-width: 375px) and (max-width: 389px) {
+.profile-card{
+    width: 350px;
+}
+
+form{
+    padding-right: 30px;
+    padding-left: 30px;
+}
+
+.save{
+    right: -115px;
+}
+}    

@@ -1,0 +1,46 @@
+@import "./basic.scss";
+
+.contaier{
+    width: 100%
+}
+.download-container{
+    width: 85%;
+    background-color: $button-color;
+    color: #fff;
+    border-top-right-radius: 15px;
+    border-top-left-radius: 15px;
+    height: auto;
+   margin-top: 15px;
+   position: fixed;
+
+   .delete{
+    //  background: ;
+    font-size: 17px;
+    display: flex;
+    padding: 2px 8px 0 0;
+    justify-content: flex-end;
+    cursor: pointer;
+   }
+
+   .icons-container{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    
+   }
+
+   
+}
+
+.file1{
+    font-size: 20px;
+   }
+   .file-search{
+    font-size: 30px;
+   }
+
+   .footer{
+    display: flex;
+    justify-content: center;
+    // padding-top: 1px;
+   }

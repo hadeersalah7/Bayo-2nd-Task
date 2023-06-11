@@ -2,13 +2,28 @@ import "./SASS/card.scss"
 import React from "react";
 import tooltip from "./Images/info_icon.svg";
 
-const Card = ({ data, isChecked }) => {
+import { useEffect, useState } from "react";
+const Card = ({ checkboxStates, handleCheckboxChange}) => {
+
+
+  const [data, setData] = useState([]);
+  useEffect(() => {
+    fetch("https://fakestoreapi.com/products?limit=12")
+      .then((response) => response.json())
+      .then((data) => setData(data))
+      .catch((e) => console.error({e}))
+  }, []);
+
+
+  
+
   return (
     <div className="title-view">
       {data?.map((item) => (
         <div key={item.id} className="title-container" >
           <input
-            checked={isChecked}
+            onChange={() => handleCheckboxChange(item.id)}
+        checked={checkboxStates[item.id]}
             type="checkbox"
             className="small-check"
           />
@@ -34,7 +49,7 @@ const Card = ({ data, isChecked }) => {
               
               <img
                 src={tooltip}
-                className="tool-image"
+                className="tool-image" alt=""
               />
             </button>
             <div className="tooltip-container">
